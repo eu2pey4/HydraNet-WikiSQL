@@ -168,8 +168,12 @@ if __name__ == "__main__":
     data_path = os.path.join("WikiSQL", "data")
     for phase in ["train", "dev", "test"]:
         src_file = os.path.join(data_path, phase + ".jsonl")
+        print(src_file)
         schema_file = os.path.join(data_path, phase + ".tables.jsonl")
+        print(schema_file)
         output_file = os.path.join("data", "wiki" + phase + ".jsonl")
+        print(output_file)
+        exit()
         schema, headers, colTypes, naturalMap = get_schema(utils.read_jsonl(schema_file))
 
         cnt = 0
